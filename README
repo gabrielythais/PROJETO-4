@@ -1,0 +1,99 @@
+# Data Analysis Automation Script
+
+This repository contains a Python script for automating the process of loading, analyzing, and visualizing data from CSV files. The script can handle files hosted on Google Drive or direct URLs. It leverages popular libraries such as `pandas`, `seaborn`, and `matplotlib` for data manipulation and visualization.
+
+## Features
+
+- Load data from Google Drive or direct URLs.
+- Perform exploratory data analysis (EDA).
+- Generate various plots including histograms, bar charts, pie charts, line charts, scatter plots, and box plots.
+- Display a correlation matrix.
+- Placeholder for specialized analysis.
+
+## Requirements
+
+- Python 3.6+
+- pandas
+- matplotlib
+- seaborn
+- requests
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/data-analysis-automation.git
+cd data-analysis-automation
+```
+
+Install the required packages:
+
+```bash
+pip install pandas matplotlib seaborn requests
+```
+
+## Usage
+
+Edit the `urls` list in the `main` function to include the URLs of your data files:
+
+```python
+urls = [
+    "https://drive.google.com/file/d/1ZlxdTXTbzs8R67BJVuH6JMyv2R3SluZO/view?usp=sharing"
+    # Add more URLs here...
+]
+```
+
+Run the script:
+
+```bash
+python main.py
+```
+
+The script will load the data from the provided URLs and perform an exploratory data analysis, generating various plots and displaying statistics about the dataset.
+
+## Functions
+
+### `carregar_dados(url, tipo_arquivo='CSV')`
+
+Loads data from a given URL. Supports Google Drive and direct URLs.
+
+### `analise_exploratoria(df)`
+
+Performs exploratory data analysis, including:
+- Displaying the first few rows of the DataFrame.
+- Showing information about the DataFrame.
+- Providing descriptive statistics for numerical variables.
+- Generating various plots.
+
+### Plot Functions
+
+- `plot_histograma(df)`: Generates a histogram for a random numerical column.
+- `plot_grafico_de_barras(df)`: Generates a bar chart for a random categorical column.
+- `plot_grafico_de_pizza(df)`: Generates a pie chart for a random categorical column.
+- `plot_grafico_de_linha(df)`: Generates a line chart for two random numerical columns.
+- `plot_grafico_de_dispersao(df)`: Generates a scatter plot for two random numerical columns.
+- `plot_boxplot(df)`: Generates a boxplot for numerical columns.
+- `identificacao_correlacoes(df)`: Generates a correlation matrix heatmap.
+
+### `analise_especialista()`
+
+Placeholder function for adding specialized analysis and insights.
+
+## Example
+
+```python
+urls = [
+    "https://drive.google.com/file/d/1ZlxdTXTbzs8R67BJVuH6JMyv2R3SluZO/view?usp=sharing"
+]
+
+main(urls)
+```
+
+## Contributing
+
+Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
